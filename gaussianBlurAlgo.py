@@ -6,7 +6,7 @@ E = math.e
 
 image_file = input("Input the aboslute path to the image to blur:\n")
 im = Image.open(image_file)
-im_res = im.copy()
+im_res = im.copy() # we must create a copy or our blur will be incorrect
 
 def gauss_func(stdev, loc):
     denom = (2*PI*stdev**2)**0.5
@@ -16,7 +16,7 @@ def gauss_func(stdev, loc):
 
 pix_r = input("Enter the blur radius:\n")
 
-box_offsets = []
+box_offsets = [] #generates all offset combos
 for i in range(-pix_r,pix_r+1):
     for j in range(-pix_r,pix_r+1):
         box_offsets.append((i,j))
