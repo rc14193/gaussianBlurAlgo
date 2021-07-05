@@ -29,8 +29,8 @@ def is_valid_pos(max_width,max_height,pos_x,pos_y):
 
 MAX_X = im.width
 MAX_Y = im.height
-for x_val in range(1,im.width):
-    for y_val in range(1,im.height):
+for x_val in range(0,im.width):
+    for y_val in range(0,im.height):
         tot_r = 0
         tot_b = 0
         tot_g = 0
